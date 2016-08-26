@@ -3,5 +3,5 @@ Given /^Pagina inicial$/ do
 end
 
 Then /^Debo ver longitud de palabra (\d+)$/ do |text|
-  last_response.body.should == text
+  last_response.body.should =~ /#{text}/m
 end
