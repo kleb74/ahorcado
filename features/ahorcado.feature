@@ -10,3 +10,9 @@ Given Pagina inicial
 When el usuario ingresa "letra" con "a"
 And acciona "confirmar"
 Then visualiza "acerto"
+
+Scenario: Usuario realiza intento y visualiza aciertos en casilleros
+Given Pagina inicial
+When el usuario ingresa "letra" con "a"
+And acciona "confirmar"
+Then visualiza la letra "a" en los casilleros acertados

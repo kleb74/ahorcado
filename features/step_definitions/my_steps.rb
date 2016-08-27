@@ -22,3 +22,8 @@ end
 Then /^visualiza "(.*?)"$/ do |text|
   last_response.body.should =~ /#{text}/m
 end
+
+Then /^visualiza la letra "(.*?)" en los casilleros acertados$/ do |text|
+  texto = "a _ _ _ _ a _ _ "
+  last_response.body.should =~ /#{texto}/m
+end
