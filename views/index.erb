@@ -13,6 +13,7 @@
     <h1><%=unless @resultado.nil?
       (@resultado ? "acerto" : "fallo") end %></h1>
     <h1><%= @@ahorcado.gano ? "Gano" : "" %></h1>
+    <h1><%= @@ahorcado.perdio ? "Perdio" : "" %></h1>
     <span>Letras utilizadas: <%= @@ahorcado.letras_utilizadas %></span>
     <br />
     <span><%= @@ahorcado.vidas %> vidas restantes</span>

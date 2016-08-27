@@ -37,3 +37,25 @@ Then visualiza "Gano"
 Scenario: Usuario visualiza 6 vidas restantes
 Given Pagina inicial
 Then visualiza "6 vidas restantes"
+
+Scenario: Usuario pierde una vida
+Given Pagina inicial
+When el usuario ingresa "letra" con "z"
+And acciona "confirmar"
+Then visualiza "5 vidas restantes"
+
+Scenario: Usuario pierde
+Given Pagina inicial
+When el usuario ingresa "letra" con "z"
+And acciona "confirmar"
+When el usuario ingresa "letra" con "x"
+And acciona "confirmar"
+When el usuario ingresa "letra" con "y"
+And acciona "confirmar"
+When el usuario ingresa "letra" con "f"
+And acciona "confirmar"
+When el usuario ingresa "letra" con "v"
+And acciona "confirmar"
+When el usuario ingresa "letra" con "q"
+And acciona "confirmar"
+Then visualiza "Perdio"

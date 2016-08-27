@@ -58,4 +58,8 @@ class Ahorcado
   def vidas
     @vidas
   end
+
+  def perdio
+    @vidas == 0
+  end
 end

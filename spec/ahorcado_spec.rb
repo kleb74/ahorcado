@@ -33,6 +33,17 @@ describe 'Retornar resultado intento' do
     expect(ahorcado.intento("d")).to be == true
     expect(ahorcado.gano).to be == true
   end
+
+  it 'El modelo retorna perdio cuando se le terminaron las vidas' do
+    ahorcado = Ahorcado.new
+    expect(ahorcado.intento("x")).to be == false
+    expect(ahorcado.intento("z")).to be == false
+    expect(ahorcado.intento("y")).to be == false
+    expect(ahorcado.intento("q")).to be == false
+    expect(ahorcado.intento("v")).to be == false
+    expect(ahorcado.intento("f")).to be == false
+    expect(ahorcado.perdio).to be == true
+  end
 end
 
 describe 'Retornar string de casilleros' do
