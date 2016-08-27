@@ -3,5 +3,10 @@
     <h1>Ahorcado</h1>
 
     <span><%= @@ahorcado.getLongitudPalabra %></span>
+    <form action="confirmar" method="post">
+      <input id="letra" name="letra"  type="text" />
+      <input id="confirmar" name="confirmar" type="submit" value="confirmar" />
+      
+    </form>
   </body>
 </html>
