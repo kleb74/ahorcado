@@ -2,11 +2,15 @@
   <body>
     <h1>Ahorcado</h1>
 
-    <span><%= @@ahorcado.getLongitudPalabra %></span>
+    <span>Longitud palabra <%= @@ahorcado.getLongitudPalabra %></span>
+    <span><%= @@ahorcado.casilleros %> </span>
     <form action="confirmar" method="post">
       <input id="letra" name="letra"  type="text" />
-      <input id="confirmar" name="confirmar" type="submit" value="confirmar" />
+      <input id ="confirmar" name="confirmar" type="submit" value="confirmar" />
       
     </form>
+
+    <h1><%=unless @resultado.nil?
+      (@resultado ? "acerto" : "fallo") end %></h1>
   </body>
 </html>

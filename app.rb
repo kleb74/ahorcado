@@ -1,7 +1,7 @@
 require 'sinatra'
 require './lib/ahorcado'
 
-
+@@ahorcado = nil
 
 get '/' do
   @@ahorcado = Ahorcado.new
@@ -9,8 +9,10 @@ get '/' do
 end
 
 post '/confirmar' do
-  "acerto"
-  #erb :index
+  letra = params[:letra]
+  @resultado = @@ahorcado.intento(letra)
+  
+  erb :index
 end
 
 
