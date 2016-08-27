@@ -17,6 +17,11 @@ describe 'Retornar resultado intento' do
     ahorcado = Ahorcado.new
     expect(ahorcado.intento("z")).to be == false
   end
+  it 'El modelo retorna el las letras utilizadas' do
+    ahorcado = Ahorcado.new
+    expect(ahorcado.intento("a")).to be == true
+    expect(ahorcado.letras_utilizadas).to be == "a"
+  end
 end
 
 describe 'Retornar string de casilleros' do

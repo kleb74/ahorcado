@@ -13,6 +13,6 @@
     <h1><%=unless @resultado.nil?
       (@resultado ? "acerto" : "fallo") end %></h1>
 
-    <span>Letras utilizadas: a</span>
+    <span>Letras utilizadas: <%= @@ahorcado.letras_utilizadas %></span>
   </body>
 </html>
