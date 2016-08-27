@@ -5,6 +5,7 @@ class Ahorcado
      {"r" => false}, {"c" => false}, {"a" => false},
       {"d" => false}, {"o" => false}]
     @letras_utilizadas = []
+    @vidas = 6
   end
 
   def getLongitudPalabra
@@ -21,6 +22,7 @@ class Ahorcado
       }
       return true
     end
+    @vidas -= 1
     false
   end
 
@@ -52,5 +54,8 @@ class Ahorcado
       }
     }
     true
+  end
+  def vidas
+    @vidas
   end
 end

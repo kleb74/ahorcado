@@ -33,3 +33,7 @@ And acciona "confirmar"
 And el usuario ingresa "letra" con "d"
 And acciona "confirmar"
 Then visualiza "Gano"
+
+Scenario: Usuario visualiza 6 vidas restantes
+Given Pagina inicial
+Then visualiza "6 vidas restantes"

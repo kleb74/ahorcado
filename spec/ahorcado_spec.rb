@@ -48,3 +48,10 @@ describe 'Retornar string de casilleros' do
   end
 
 end
+
+describe 'Retornar vidas restantes' do
+  it 'el modelo retorna vidas restantes' do
+    ahorcado = Ahorcado.new
+    expect(ahorcado.vidas).to be == 6
+  end
+end
