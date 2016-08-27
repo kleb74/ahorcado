@@ -11,7 +11,16 @@ class Ahorcado
   end
 
   def intento(letra)
-    @palabra.include? letra
+
+    if @palabra.include? letra
+      @map.each { |par|
+        if par.keys.include? letra
+          par[letra] = true
+        end
+      }
+      return true
+    end
+    false
   end
 
   def casilleros
@@ -21,7 +30,7 @@ class Ahorcado
         if not v
           r.push("_ ")
         else
-          r.push k
+          r.push(k + " ")
         end
       }
     }

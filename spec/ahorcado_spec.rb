@@ -24,4 +24,11 @@ describe 'Retornar string de casilleros' do
     ahorcado = Ahorcado.new
     expect(ahorcado.casilleros).to be == "_ _ _ _ _ _ _ _ "
   end
+
+  it 'el modelo retorna el string de casilleros despues de un intento valido' do
+    ahorcado = Ahorcado.new
+    ahorcado.intento("a")
+    expect(ahorcado.casilleros).to be == "a _ _ _ _ a _ _ "
+  end
+
 end
