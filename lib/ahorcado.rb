@@ -42,4 +42,15 @@ class Ahorcado
   def letras_utilizadas
     @letras_utilizadas.join(", ")
   end
+
+  def gano
+    @map.each { |hash|
+      hash.map { |k,v|
+        if not v
+          return false
+        end
+      }
+    }
+    true
+  end
 end

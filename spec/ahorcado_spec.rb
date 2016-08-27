@@ -22,6 +22,17 @@ describe 'Retornar resultado intento' do
     expect(ahorcado.intento("a")).to be == true
     expect(ahorcado.letras_utilizadas).to be == "a"
   end
+
+  it 'El modelo retorna gano cuando acerto todas las letras' do
+    ahorcado = Ahorcado.new
+    expect(ahorcado.intento("a")).to be == true
+    expect(ahorcado.intento("h")).to be == true
+    expect(ahorcado.intento("o")).to be == true
+    expect(ahorcado.intento("r")).to be == true
+    expect(ahorcado.intento("c")).to be == true
+    expect(ahorcado.intento("d")).to be == true
+    expect(ahorcado.gano).to be == true
+  end
 end
 
 describe 'Retornar string de casilleros' do

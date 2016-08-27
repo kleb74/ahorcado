@@ -17,3 +17,19 @@ Given Pagina inicial
 When el usuario ingresa "letra" con "a"
 And acciona "confirmar"
 Then visualiza la letra "a" en los casilleros acertados
+
+Scenario: Usuario gana
+Given Pagina inicial
+When el usuario ingresa "letra" con "a"
+And acciona "confirmar"
+And el usuario ingresa "letra" con "h"
+And acciona "confirmar"
+And el usuario ingresa "letra" con "o"
+And acciona "confirmar"
+And el usuario ingresa "letra" con "r"
+And acciona "confirmar"
+And el usuario ingresa "letra" con "c"
+And acciona "confirmar"
+And el usuario ingresa "letra" con "d"
+And acciona "confirmar"
+Then visualiza "Gano"
